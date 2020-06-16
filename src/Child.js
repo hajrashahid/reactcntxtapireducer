@@ -1,11 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react';
+
+import ValueContext from './ValueContext';
 
 function Child(props) {
+    let value = useContext(ValueContext);
   return (
     <div>
-      Child number {props.num}
+      Child number {value}
       
     </div>
   );
